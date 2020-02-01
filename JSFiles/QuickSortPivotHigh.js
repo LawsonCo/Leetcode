@@ -32,7 +32,6 @@ function partition(arr, low, high) {
     let pivot = arr[high]
     let i = low - 1
     for (let j = low; j < high; j++) {
-        console.log(j)
         if (arr[j] < pivot) {
             i++
             swap(arr, i, j)
