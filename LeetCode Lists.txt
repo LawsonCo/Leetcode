@@ -9,7 +9,7 @@ https://jeremyaguilon.me/blog/ranking_interview_questions_by_cram_score
 Methodology: 
 - Given 1hr 45mins per day 
 - Spend 45 mins attempting to solve the problem (assume first 15 mins is ramp up, work until 9am) 
-- Try to pass all tests on the first try. Consider edge cases, etc. Write unit tests
+- Try to pass all tests on the first try. Consider edge cases, etc. Write unit tests 
 - Spend next 45 mins deeply understanding other people's solutions
 ---> Take notes :)
 
