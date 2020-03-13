@@ -73,4 +73,34 @@ function growPalindrome(s, currIndex) {
     return pattern2
 }
 
-console.log(longestPalindrome("ccc"))
+//console.log(longestPalindrome("ccc"))
+
+var longestPalindrome3 = function(s) {
+    if (s.length == 0) {
+        return false
+    }
+    let isEven = true
+    if (s.length % 2 != 0) {
+        isEven = false
+    }
+    let stack = []
+    let fast = 0
+    for (i = 0; i < s.length; i++) {
+        if (fast < s.length) {
+            stack.push(s[i])
+            fast+=2
+            continue
+        }
+        if (!isEven) {
+            isEven = true
+            stack.pop()
+        }
+        let curr = stack.pop()
+        if (curr != s[i]) {
+            return false
+        }
+    }
+    return true
+};
+
+console.log(longestPalindrome3("catac"))
