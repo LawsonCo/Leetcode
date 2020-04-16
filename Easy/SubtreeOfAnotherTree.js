@@ -17,6 +17,11 @@ function overlap(s, t) {
     return overlap(s.left, t.left) && overlap(s.right, t.right)
 }
 
+// Iterate over bigger tree 
+// If root == subtree root,
+// ---> Traverse both trees and compare all nodex 
+// O(m * n)
+// In the worst case, traverse the whole subtree for every node of larger tree
 var isSubtree = function(s, t) {
     if (t == null || s == null) {
         return false
