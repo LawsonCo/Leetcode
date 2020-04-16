@@ -4,7 +4,6 @@
  * Given k sorted linked lists, merge them 
  */
 
-
 /**
  * Idea: Iterate over the lists and throw them into merge2
  * Works! Can we do better?
