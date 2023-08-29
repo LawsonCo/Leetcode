@@ -21,11 +21,9 @@ function fibonacci(i) {
     }(i)
 }
 
-// Bastardized version of fibonacci that passes in the memo on each call 
-// problem here is that the map gets passed in by value, so anything set in 
-// a lower level doesn't propogate upwards. We end up duplicating work 
-// in different branched forks
-function bastardizedFibonacci(i) {
+// Alternative version of fibonacci that passes in the memo on each call. 
+// Object gets passed as the value of the pointer, so each update is propagated to other calls
+function alternativeFibonacci(i) {
     // define this nested memoized fib
     return function memoizedFib(n, memo) {
         // way to hack memo into working
@@ -38,7 +36,7 @@ function bastardizedFibonacci(i) {
         }
         if (memo[n] == null) {
             console.log("Calculating value " + n + " for the first time")
-            memo[n] = memoizedFib(n - 1) + memoizedFib(n - 2)
+            memo[n] = memoizedFib(n - 1, memo) + memoizedFib(n - 2, memo)
         }
         return memo[n]
     }(i, {})
@@ -56,10 +54,9 @@ function terribleFibonacci(i) {
     return terribleFibonacci(i - 1) + terribleFibonacci(i - 2)
 }
 
-//console.log(bastardizedFibonacci(11))
-//console.log(terribleFibonacci(11))
-console.log(fibonacci(11))
-
+//console.log(fibonacci(11))
+//console.log(alternativeFibonacci(11))
+console.log(terribleFibonacci(11))
 
 // General memoization: 
 
