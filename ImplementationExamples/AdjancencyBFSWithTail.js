@@ -41,6 +41,9 @@ function bfsSearch (adjacency_list, start_node, end_node) {
     var seen_nodes = {}
     while (queue.length != 0) {
         node = queue.shift()
+        if (seen_nodes[node.getName()]) {
+            continue
+        }
         console.log("Searching: " + node.node_name)
         if (node.getName() == end_node) {
             node.addToTail(node.node_name)
@@ -49,7 +52,7 @@ function bfsSearch (adjacency_list, start_node, end_node) {
         seen_nodes[node.getName()] = true
         parent_tail = node.getTail()
         for (var k = 0; k < adjacency_list[node.getName()].length; k++){
-            if (seen_nodes[adjacency_list[node.getName()][k]] == true) {
+            if (seen_nodes[adjacency_list[node.getName()][k]]) {
                 continue
             }
             parent_tail_copy = parent_tail.slice()
@@ -61,5 +64,7 @@ function bfsSearch (adjacency_list, start_node, end_node) {
     }
     return false
 }
+
+console.log(bfsSearch(adjacency_list, "A", "E"))
 
 console.log(bfsSearch(bfs_dfs_big_diff_list, "A", "B"))

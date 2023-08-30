@@ -21,6 +21,9 @@ function bfsSearch (adjacency_list, start_node, end_node) {
     var seen_nodes = {}
     while (queue.length != 0) {
         node = queue.shift()
+        if (seen_nodes[node]) {
+            continue
+        }
         console.log("Searching: " + node)
         if (node == end_node) {
             return true
@@ -37,3 +40,4 @@ function bfsSearch (adjacency_list, start_node, end_node) {
 }
 
 console.log(bfsSearch(bfs_dfs_big_diff_list, "A", "E"))
+console.log(bfsSearch(adjacency_list, "A", "E"))

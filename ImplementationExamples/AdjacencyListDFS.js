@@ -14,6 +14,9 @@ function dfsSearch (adjacency_list, start_node, end_node) {
     var seen_nodes = {}
     while (stack.length != 0) {
         node = stack.pop()
+        if (seen_nodes[node]) {
+            continue
+        }
         seen_nodes[node] = true
         console.log("Searching: " + node)
         if (node == end_node) {
@@ -29,3 +32,4 @@ function dfsSearch (adjacency_list, start_node, end_node) {
 }
 
 console.log(dfsSearch(adjacency_list, "A", "E"))
+// A, C, B, F, E, true

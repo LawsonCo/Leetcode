@@ -20,31 +20,10 @@ var big_boy = [
 ]
 
 function bfsSearch(adjacency_matrix, start_node, end_node) {
-    var queue = [start_node]
-    // map is more efficient
-    var seen_nodes = {}
-    while (queue.length != 0) {
-        node = queue.shift()
-        if (seen_nodes[node]) {
-            continue
-        }
-        console.log("Searching: " + node)
-        seen_nodes[node] = true
-        if (node == end_node) {
-            return true
-        }
-        for (var i = 0; i < adjacency_matrix[node].length; i++) {
-            if (adjacency_matrix[node][i] == 1) {
-                if (seen_nodes[i] != true) {
-                    queue.push(i)
-                }
-            }
-        }
-    }
-    return false
+    console.log("Searching: " + node)
 }
 
 console.log(bfsSearch(adjacency_matrix, 2, 3))
-// 2, 4, 1, 0, 3
+// 2, 4, 1, 0, 3, true
 console.log(bfsSearch(big_boy, 0, 5))
-// 0, 1, 6, 8, 4, 9, 2, 3, 7, 5
+// 0, 1, 6, 8, 4, 9, 2, 3, 7, 5, true
