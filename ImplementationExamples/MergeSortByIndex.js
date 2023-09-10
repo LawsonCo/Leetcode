@@ -1,4 +1,4 @@
-function merge(arr, startInclusive, mid, endInclusive) {
+function mergeSortedArrays(arr, startInclusive, mid, endInclusive) {
 	// create a temp array
 	var temp = []
 
@@ -43,7 +43,7 @@ function mergeSort(myArr, startInclusive, endInclusive) {
 
         mergeSort(myArr, startInclusive, mid)
         mergeSort(myArr, mid+1, endInclusive)
-        merge(myArr, startInclusive, mid, endInclusive)
+        mergeSortedArrays(myArr, startInclusive, mid, endInclusive)
     }
 }
 

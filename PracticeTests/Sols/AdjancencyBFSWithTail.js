@@ -46,7 +46,6 @@ function bfsSearch (adjacency_list, start_node, end_node) {
 
         seen_nodes[node.getVal()] = true
 
-
         for (i = 0; i < adjacency_list[node.getVal()].length; i++) {
             if (seen_nodes[adjacency_list[node.getVal()][i]] != true) {
                 queue.push(new Node(adjacency_list[node.getVal()][i], node.getTail().concat([node.getVal()])))

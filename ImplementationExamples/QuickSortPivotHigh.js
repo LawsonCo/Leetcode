@@ -1,5 +1,5 @@
 
-
+var n = 0
 // Don't forget to recurse on pivot+1 and pivot-1
 // You don't want to end up in an infinite loop
 function quickSort(arr, low, high) {
@@ -26,7 +26,9 @@ function swap(arr, first, second) {
 // and would thus be included in i's range
 // At the end we swap i+1 with the pivot, since we know everything at or below i is smaller, and anything
 // larger than i is larger than the pivot
+
 function partition(arr, low, high) {
+    n++
     console.log("Original array:")
     console.log(arr)
     let pivot = arr[high]
@@ -34,17 +36,19 @@ function partition(arr, low, high) {
     for (let j = low; j < high; j++) {
         if (arr[j] < pivot) {
             i++
+            console.log("Swapping: " + i + " " + j)
             swap(arr, i, j)
         }
     }
     let partitionIndex = i + 1
     swap(arr, partitionIndex, high)
-    console.log("After Partition:")
-    console.log(arr)
+    console.log("After Partition: " + arr.toString())
     console.log("Partition Index: " + partitionIndex)
     return partitionIndex
 }
 
-let test_arr = [1, 8, 3, 1, 0, 9, 10]
+let test_arr = [100, 110, 3, 10, 7, 8]
 quickSort(test_arr, 0, test_arr.length - 1)
 console.log(test_arr)
+console.log(n)
+// [ 3, 7, 8, 10, 100, 110 ] 
