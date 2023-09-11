@@ -2,3 +2,4 @@ Good Review Questions
 
 Product of Array Except Self (can't use division): https://leetcode.com/problems/product-of-array-except-self/
 
+Encode/Decode strings - Need to handle delimiter to ensure it's not part of the original code. Use escape characters!
