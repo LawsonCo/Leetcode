@@ -1,5 +1,7 @@
 Good Review Questions 
 
-Product of Array Except Self (can't use division): https://leetcode.com/problems/product-of-array-except-self/
+Take a look at LC hits if you get stuck! 
 
+Product of Array Except Self (can't use division) - https://leetcode.com/problems/product-of-array-except-self/
 Encode/Decode strings - Need to handle delimiter to ensure it's not part of the original code. Use escape characters!
+Implement Min Stack in constant time (trick to maintain minimum) - https://leetcode.com/problems/min-stack/editorial/
