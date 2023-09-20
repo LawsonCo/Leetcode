@@ -31,6 +31,7 @@ function mergeSort(myArr, startInclusive, endInclusive) {
     }
     console.log("Sorting: " + startInclusive + " " + endInclusive)
     let mid = Math.floor((endInclusive+startInclusive)/2)
+    
     mergeSort(myArr, startInclusive, mid)
     mergeSort(myArr, mid+1, endInclusive)
     mergeSortedArrays(myArr,startInclusive,mid,endInclusive)

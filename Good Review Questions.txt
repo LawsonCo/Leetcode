@@ -5,3 +5,8 @@ Take a look at LC hits if you get stuck!
 Product of Array Except Self (can't use division) - https://leetcode.com/problems/product-of-array-except-self/
 Encode/Decode strings - Need to handle delimiter to ensure it's not part of the original code. Use escape characters!
 Implement Min Stack in constant time (trick to maintain minimum) - https://leetcode.com/problems/min-stack/editorial/
+Generate Parenthesis - Interesting trick, similar to Knapsack problem - https://leetcode.com/problems/generate-parentheses/submissions/1048810227/
+Daily Temperatures - Interesting trick - https://leetcode.com/problems/daily-temperatures/submissions/
+2Sum2 - Neat way to use to pointers - https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+   - Note tradeoffs between 2Sum & 2Sum2. 2Sum2 is O(NLogN) if we sort, O(1) space. 2Sum is O(N) time, O(N) space
+searchMatrixRecursive - Neat way to iterate over a 2D matrix by treating it like a single contigous array - https://leetcode.com/problems/search-a-2d-matrix/editorial/

@@ -16,7 +16,28 @@ var bfs_dfs_big_diff_list = {
 
 // Search the adjacency list to get from A to E
 function bfsSearch (adjacency_list, start_node, end_node) {
-    console.log("Searching: " + node)
+    
+    let queue = [start_node]
+    let seen_nodes = {}
+    while (queue.length > 0) {
+        let curr = queue.shift()
+
+        if (seen_nodes[curr]) {
+            continue
+        }
+        
+        console.log("Searching: " + curr)
+
+        seen_nodes[curr] = true
+        if (curr == end_node) {
+            return true
+        }
+
+        for (i = 0; i < adjacency_list[curr].length; i++) {
+            queue.push(adjacency_list[curr][i])
+        }
+    }
+    return false
 }
 
 console.log(bfsSearch(bfs_dfs_big_diff_list, "A", "E"))
