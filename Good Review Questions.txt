@@ -10,3 +10,4 @@ Daily Temperatures - Interesting trick - https://leetcode.com/problems/daily-tem
 2Sum2 - Neat way to use to pointers - https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
    - Note tradeoffs between 2Sum & 2Sum2. 2Sum2 is O(NLogN) if we sort, O(1) space. 2Sum is O(N) time, O(N) space
 searchMatrixRecursive - Neat way to iterate over a 2D matrix by treating it like a single contigous array - https://leetcode.com/problems/search-a-2d-matrix/editorial/
+lengthOfLongestSubstring - Good pointer hell practice
